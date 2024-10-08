@@ -47,10 +47,8 @@
 - **실시간 조회**: 고객은 등록된 모든 장비의 상태와 실시간 데이터를 빠르게 조회할 수 있어야 한다. (CQRS)
 - **알림 처리**: 네트워크 장비 상태가 변경될 때마다 즉시 고객에게 알림을 전달할 수 있어야 한다. (Event-driven)
 
-
 ## Event Storming 결과
-* MSAEz 로 모델링한 이벤트스토밍 결과:  http://www.msaez.io/#/storming/QtpQtDiH1Je3wad2QxZUJVvnLzO2/share/6f36e16efdf8c872da3855fedf7f3ea9
-
+* MSAEz 로 모델링한 이벤트스토밍 결과:  https://labs.msaez.io/#/62131378/storming/nm
 
 ### 이벤트 도출
-![image](https://user-images.githubusercontent.com/15603058/119298548-337fda80-bc98-11eb-9f96-7d583d156fb9.png)
+![image](https://private-user-images.githubusercontent.com/110804423/374380817-20a328ed-64c3-4284-8d73-ad89654f6234.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjgzNTMyOTYsIm5iZiI6MTcyODM1Mjk5NiwicGF0aCI6Ii8xMTA4MDQ0MjMvMzc0MzgwODE3LTIwYTMyOGVkLTY0YzMtNDI4NC04ZDczLWFkODk2NTRmNjIzNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQxMDA4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MTAwOFQwMjAzMTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0yMWI0YTcxM2Y3NzgwZTM1Y2RkZDg2YjZhMDZhODUxZGYwMjQxYjA0OTdkZjI5OWFjYWE0MTJkMWM4NGZkYWE4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.c6fi6DbvxucsO2Vi7xjgENwJLYhuip709qW7xM9C3aE)

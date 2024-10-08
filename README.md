@@ -1,7 +1,7 @@
 # 
 
 ## Model
-www.msaez.io/#/storming/62131378_es_nm
+www.msaez.io/#/62131378/storming/nm2
 
 ## Before Running Services
 ### Make sure there is a Kafka server running
@@ -40,7 +40,7 @@ mvn spring-boot:run
 ```
 - registration
 ```
- http :8088/inputInfos id="id" clientName="client_name" createDate="create_date" clientEquips="clientEquips" 
+ http :8088/inputInfos id="id" clientName="client_name" createDate="create_date" details="details" 
 ```
 - inspecthttp
 ```
@@ -52,7 +52,7 @@ mvn spring-boot:run
 ```
 - management
 ```
- http :8088/clients id="id" createDate="create_date" modifiDate="modifi_date" clientName="client_name" stateReq="state_req" stateDns="state_dns" stateEtn="state_etn" lastInspectDate="last_inspect_date" device="device" 
+ http :8088/clients id="id" createDate="create_date" modifiDate="modifi_date" clientName="client_name" totalReq="total_req" totalDns="total_dns" totalEtn="total_etn" lastInspectDate="last_inspect_date" details="details" 
 ```
 
 

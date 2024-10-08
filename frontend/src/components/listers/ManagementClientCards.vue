@@ -107,11 +107,11 @@
                 'createDate': '',
                 'modifiDate': '',
                 'clientName': '',
-                'stateReq': '',
-                'stateDns': '',
-                'stateEtn': '',
+                'totalReq': '',
+                'totalDns': '',
+                'totalEtn': '',
                 'lastInspectDate': '',
-                'device': [],
+                'details': [],
             }
         },
         methods:{

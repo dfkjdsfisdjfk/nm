@@ -11,7 +11,7 @@
             <div>
                 <Date label="CreateDate" v-model="item.createDate" :editMode="editMode" @change="change" />
             </div>
-            <ClientEquipManager offline label="ClientEquips" v-model="item.clientEquips" :editMode="false" @change="change" />
+            <DetailManager offline label="Details" v-model="item.details" :editMode="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>

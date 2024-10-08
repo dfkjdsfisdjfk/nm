@@ -56,11 +56,11 @@
                             [ CreateDate :  {{data.createDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ModifiDate :  {{data.modifiDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ClientName :  {{data.clientName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StateReq :  {{data.stateReq }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StateDns :  {{data.stateDns }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StateEtn :  {{data.stateEtn }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TotalReq :  {{data.totalReq }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TotalDns :  {{data.totalDns }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TotalEtn :  {{data.totalEtn }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ LastInspectDate :  {{data.lastInspectDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Device :  {{data.device }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Details :  {{data.details }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -131,11 +131,11 @@
                 'createDate': '',
                 'modifiDate': '',
                 'clientName': '',
-                'stateReq': '',
-                'stateDns': '',
-                'stateEtn': '',
+                'totalReq': '',
+                'totalDns': '',
+                'totalEtn': '',
                 'lastInspectDate': '',
-                'device': [],
+                'details': [],
             }
         },
         methods: {

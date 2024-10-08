@@ -18,7 +18,7 @@
         <v-card-text style="background-color: white;">
             <String label="ClientName" v-model="value.clientName" :editMode="editMode" :inputUI="''"/>
             <Date label="CreateDate" v-model="value.createDate" :editMode="editMode" :inputUI="''"/>
-            <ClientEquipManager offline label="ClientEquips" v-model="value.clientEquips" :editMode="editMode" @change="change"/>
+            <DetailManager offline label="Details" v-model="value.details" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions style="background-color: white;">

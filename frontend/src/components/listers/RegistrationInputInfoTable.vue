@@ -69,7 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "clientName", value: "clientName" },
                     { text: "createDate", value: "createDate" },
-                    { text: "clientEquips", value: "clientEquips" },
+                    { text: "details", value: "details" },
                 ],
             inputInfo : [],
             newValue: {},
@@ -89,7 +89,7 @@
             this.newValue = {
                 'clientName': '',
                 'createDate': '2024-10-08',
-                'clientEquips': [],
+                'details': [],
             }
         },
         methods: {

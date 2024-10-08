@@ -24,19 +24,19 @@
                                 ClientName :  {{item.clientName }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                StateReq :  {{item.stateReq }}
+                                TotalReq :  {{item.totalReq }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                StateDns :  {{item.stateDns }}
+                                TotalDns :  {{item.totalDns }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                StateEtn :  {{item.stateEtn }}
+                                TotalEtn :  {{item.totalEtn }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 LastInspectDate :  {{item.lastInspectDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Device :  {{item.device }}
+                                Details :  {{item.details }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

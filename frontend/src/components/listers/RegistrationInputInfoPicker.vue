@@ -21,7 +21,7 @@
                                 CreateDate :  {{item.createDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                ClientEquips :  {{item.clientEquips }}
+                                Details :  {{item.details }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 

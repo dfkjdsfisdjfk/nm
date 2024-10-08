@@ -1,7 +1,8 @@
 # N.M
 
 # 초안
-![image](https://private-user-images.githubusercontent.com/62131378/374380159-c7d48b75-a6e2-4add-bd00-130237630007.png)
+![image](https://github.com/user-attachments/assets/68b51529-3d1d-4006-82f2-57a72d82018e)
+
 
 
 # 서비스 시나리오

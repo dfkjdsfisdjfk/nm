@@ -27,16 +27,16 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='SwapToInspect'"
     )
-    public void wheneverSwapToInspect_StartHttpInspect(
+    public void wheneverSwapToInspect_HttpInspect(
         @Payload SwapToInspect swapToInspect
     ) {
         SwapToInspect event = swapToInspect;
         System.out.println(
-            "\n\n##### listener StartHttpInspect : " + swapToInspect + "\n\n"
+            "\n\n##### listener HttpInspect : " + swapToInspect + "\n\n"
         );
 
         // Sample Logic //
-        IcmpData.startHttpInspect(event);
+        IcmpData.httpInspect(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor

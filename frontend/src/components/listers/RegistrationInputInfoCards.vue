@@ -106,7 +106,7 @@
             me.newValue = {
                 'clientName': '',
                 'createDate': '2024-10-08',
-                'clientEquips': [],
+                'details': [],
             }
         },
         methods:{

@@ -50,7 +50,7 @@
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ClientName :  {{data.clientName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CreateDate :  {{data.createDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ ClientEquips :  {{data.clientEquips }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Details :  {{data.details }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -120,7 +120,7 @@
             this.newValue = {
                 'clientName': '',
                 'createDate': '2024-10-08',
-                'clientEquips': [],
+                'details': [],
             }
         },
         methods: {

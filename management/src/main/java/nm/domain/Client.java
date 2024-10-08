@@ -24,16 +24,16 @@ public class Client {
 
     private String clientName;
 
-    private String stateReq;
+    private String totalReq;
 
-    private String stateDns;
+    private String totalDns;
 
-    private String stateEtn;
+    private String totalEtn;
 
     private String lastInspectDate;
 
     @ElementCollection
-    private List<Device> device;
+    private List<Detail> details;
 
     @PostPersist
     public void onPostPersist() {

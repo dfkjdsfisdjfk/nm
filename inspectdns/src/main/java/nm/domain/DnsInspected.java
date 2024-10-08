@@ -9,18 +9,20 @@ import nm.infra.AbstractEvent;
 //<<< DDD / Domain Event
 @Data
 @ToString
-public class ClientInfoCreated extends AbstractEvent {
+public class DnsInspected extends AbstractEvent {
 
     private Long id;
-    private String clientName;
-    private Date createDate;
-    private List<Detail> details;
+    private String obj;
+    private String objDetail;
+    private String state;
+    private Date endedDate;
+    private String resultData;
 
-    public ClientInfoCreated(InputInfo aggregate) {
+    public DnsInspected(IcmpData aggregate) {
         super(aggregate);
     }
 
-    public ClientInfoCreated() {
+    public DnsInspected() {
         super();
     }
 }

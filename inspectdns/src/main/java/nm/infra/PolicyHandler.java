@@ -27,16 +27,16 @@ public class PolicyHandler {
         value = KafkaProcessor.INPUT,
         condition = "headers['type']=='SwapToInspect'"
     )
-    public void wheneverSwapToInspect_StartDnsInspect(
+    public void wheneverSwapToInspect_Inspect(
         @Payload SwapToInspect swapToInspect
     ) {
         SwapToInspect event = swapToInspect;
         System.out.println(
-            "\n\n##### listener StartDnsInspect : " + swapToInspect + "\n\n"
+            "\n\n##### listener Inspect : " + swapToInspect + "\n\n"
         );
 
         // Sample Logic //
-        IcmpData.startDnsInspect(event);
+        IcmpData.inspect(event);
     }
 }
 //>>> Clean Arch / Inbound Adaptor

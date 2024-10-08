@@ -1,0 +1,196 @@
+package nm.domain;
+
+import java.time.LocalDate;
+import java.util.Date;
+import java.util.List;
+import javax.persistence.*;
+import lombok.Data;
+import nm.ManagementApplication;
+import nm.domain.SwapToInspect;
+
+@Entity
+@Table(name = "Client_table")
+@Data
+//<<< DDD / Aggregate Root
+public class Client {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    private String createDate;
+
+    private String modifiDate;
+
+    private String clientName;
+
+    private String stateReq;
+
+    private String stateDns;
+
+    private String stateEtn;
+
+    private String lastInspectDate;
+
+    @ElementCollection
+    private List<Device> device;
+
+    @PostPersist
+    public void onPostPersist() {
+        SwapToInspect swapToInspect = new SwapToInspect(this);
+        swapToInspect.publishAfterCommit();
+    }
+
+    public static ClientRepository repository() {
+        ClientRepository clientRepository = ManagementApplication.applicationContext.getBean(
+            ClientRepository.class
+        );
+        return clientRepository;
+    }
+
+    //<<< Clean Arch / Port Method
+    public static void dataRegist(ClientInfoCreated clientInfoCreated) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Client client = new Client();
+        repository().save(client);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(clientInfoCreated.get???()).ifPresent(client->{
+            
+            client // do something
+            repository().save(client);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void dataModify(ClientInfoModified clientInfoModified) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Client client = new Client();
+        repository().save(client);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(clientInfoModified.get???()).ifPresent(client->{
+            
+            client // do something
+            repository().save(client);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void dataModify(StartDnsInspected startDnsInspected) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Client client = new Client();
+        repository().save(client);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(startDnsInspected.get???()).ifPresent(client->{
+            
+            client // do something
+            repository().save(client);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void dataModify(StartHttpInspected startHttpInspected) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Client client = new Client();
+        repository().save(client);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(startHttpInspected.get???()).ifPresent(client->{
+            
+            client // do something
+            repository().save(client);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void dataModify(StartIcmpInspected startIcmpInspected) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Client client = new Client();
+        repository().save(client);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(startIcmpInspected.get???()).ifPresent(client->{
+            
+            client // do something
+            repository().save(client);
+
+
+         });
+        */
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public static void dataDelete(ClientInfoDeleted clientInfoDeleted) {
+        //implement business logic here:
+
+        /** Example 1:  new item 
+        Client client = new Client();
+        repository().save(client);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(clientInfoDeleted.get???()).ifPresent(client->{
+            
+            client // do something
+            repository().save(client);
+
+
+         });
+        */
+
+    }
+    //>>> Clean Arch / Port Method
+
+}
+//>>> DDD / Aggregate Root

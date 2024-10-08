@@ -1,0 +1,285 @@
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inspecticmp
+  labels:
+    app: inspecticmp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inspecticmp
+  template:
+    metadata:
+      labels:
+        app: inspecticmp
+    spec:
+      containers:
+        - name: inspecticmp
+          image: username/inspecticmp:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registration
+  labels:
+    app: registration
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: registration
+  template:
+    metadata:
+      labels:
+        app: registration
+    spec:
+      containers:
+        - name: registration
+          image: username/registration:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inspecthttp
+  labels:
+    app: inspecthttp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inspecthttp
+  template:
+    metadata:
+      labels:
+        app: inspecthttp
+    spec:
+      containers:
+        - name: inspecthttp
+          image: username/inspecthttp:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: inspectdns
+  labels:
+    app: inspectdns
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: inspectdns
+  template:
+    metadata:
+      labels:
+        app: inspectdns
+    spec:
+      containers:
+        - name: inspectdns
+          image: username/inspectdns:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+---
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: management
+  labels:
+    app: management
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: management
+  template:
+    metadata:
+      labels:
+        app: management
+    spec:
+      containers:
+        - name: management
+          image: username/management:latest
+          ports:
+            - containerPort: 8080
+          readinessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 10
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 10
+          livenessProbe:
+            httpGet:
+              path: '/actuator/health'
+              port: 8080
+            initialDelaySeconds: 120
+            timeoutSeconds: 2
+            periodSeconds: 5
+            failureThreshold: 5
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: inspecticmp
+  labels:
+    app: inspecticmp
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: inspecticmp
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: registration
+  labels:
+    app: registration
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: registration
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: inspecthttp
+  labels:
+    app: inspecthttp
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: inspecthttp
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: inspectdns
+  labels:
+    app: inspectdns
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: inspectdns
+
+
+---
+
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: management
+  labels:
+    app: management
+spec:
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: management
+

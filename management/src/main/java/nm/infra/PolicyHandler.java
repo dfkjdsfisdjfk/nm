@@ -57,14 +57,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='StartDnsInspected'"
+        condition = "headers['type']=='StartIcmpInspected'"
     )
-    public void wheneverStartDnsInspected_DataModify(
-        @Payload StartDnsInspected startDnsInspected
+    public void wheneverStartIcmpInspected_DataModify(
+        @Payload StartIcmpInspected startIcmpInspected
     ) {
-        StartDnsInspected event = startDnsInspected;
+        StartIcmpInspected event = startIcmpInspected;
         System.out.println(
-            "\n\n##### listener DataModify : " + startDnsInspected + "\n\n"
+            "\n\n##### listener DataModify : " + startIcmpInspected + "\n\n"
         );
 
         // Sample Logic //
@@ -89,14 +89,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='StartIcmpInspected'"
+        condition = "headers['type']=='StartDnsInspected'"
     )
-    public void wheneverStartIcmpInspected_DataModify(
-        @Payload StartIcmpInspected startIcmpInspected
+    public void wheneverStartDnsInspected_DataModify(
+        @Payload StartDnsInspected startDnsInspected
     ) {
-        StartIcmpInspected event = startIcmpInspected;
+        StartDnsInspected event = startDnsInspected;
         System.out.println(
-            "\n\n##### listener DataModify : " + startIcmpInspected + "\n\n"
+            "\n\n##### listener DataModify : " + startDnsInspected + "\n\n"
         );
 
         // Sample Logic //

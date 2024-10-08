@@ -25,7 +25,7 @@ public class InputInfo {
     private Date createDate;
 
     @ElementCollection
-    private List<ClientEquip> clientEquips;
+    private List<Detail> details;
 
     @PostPersist
     public void onPostPersist() {

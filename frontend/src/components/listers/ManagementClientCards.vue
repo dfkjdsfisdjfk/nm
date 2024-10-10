@@ -104,14 +104,15 @@
             me.values = temp.data._embedded.clients;
             
             me.newValue = {
+                'clientId': 0,
                 'createDate': '',
                 'modifiDate': '',
                 'clientName': '',
-                'stateReq': '',
-                'stateDns': '',
-                'stateEtn': '',
+                'totalReq': '',
+                'totalDns': '',
+                'totalEtn': '',
                 'lastInspectDate': '',
-                'device': [],
+                'details': [],
             }
         },
         methods:{

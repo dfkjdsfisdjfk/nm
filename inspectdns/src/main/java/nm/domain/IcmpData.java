@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import nm.InspectdnsApplication;
-import nm.domain.StartDnsInspected;
+import nm.domain.DnsInspected;
 
 @Entity
 @Table(name = "IcmpData_table")
@@ -30,8 +30,8 @@ public class IcmpData {
 
     @PostPersist
     public void onPostPersist() {
-        StartDnsInspected startDnsInspected = new StartDnsInspected(this);
-        startDnsInspected.publishAfterCommit();
+        DnsInspected dnsInspected = new DnsInspected(this);
+        dnsInspected.publishAfterCommit();
     }
 
     public static IcmpDataRepository repository() {
@@ -42,7 +42,7 @@ public class IcmpData {
     }
 
     //<<< Clean Arch / Port Method
-    public static void startDnsInspect(SwapToInspect swapToInspect) {
+    public static void inspect(SwapToInspect swapToInspect) {
         //implement business logic here:
 
         /** Example 1:  new item 

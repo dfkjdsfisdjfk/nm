@@ -6,7 +6,7 @@ import java.util.List;
 import javax.persistence.*;
 import lombok.Data;
 import nm.InspecticmpApplication;
-import nm.domain.StartIcmpInspected;
+import nm.domain.IcmpInspected;
 
 @Entity
 @Table(name = "IcmpData_table")
@@ -16,7 +16,7 @@ public class IcmpData {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long ipId;
 
     private String obj;
 
@@ -30,8 +30,8 @@ public class IcmpData {
 
     @PostPersist
     public void onPostPersist() {
-        StartIcmpInspected startIcmpInspected = new StartIcmpInspected(this);
-        startIcmpInspected.publishAfterCommit();
+        IcmpInspected icmpInspected = new IcmpInspected(this);
+        icmpInspected.publishAfterCommit();
     }
 
     public static IcmpDataRepository repository() {
@@ -42,7 +42,7 @@ public class IcmpData {
     }
 
     //<<< Clean Arch / Port Method
-    public static void startIcmpInspect(SwapToInspect swapToInspect) {
+    public static void icmpInspect(SwapToInspect swapToInspect) {
         //implement business logic here:
 
         /** Example 1:  new item 

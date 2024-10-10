@@ -16,14 +16,15 @@
         </v-card-title >        
 
         <v-card-text style="background-color: white;">
+            <Number v-if="editMode" label="ClientId" v-model="value.clientId" :editMode="editMode" :inputUI="''"/>
             <String label="CreateDate" v-model="value.createDate" :editMode="editMode" :inputUI="''"/>
             <String label="ModifiDate" v-model="value.modifiDate" :editMode="editMode" :inputUI="''"/>
             <String label="ClientName" v-model="value.clientName" :editMode="editMode" :inputUI="''"/>
-            <String label="StateReq" v-model="value.stateReq" :editMode="editMode" :inputUI="''"/>
-            <String label="StateDns" v-model="value.stateDns" :editMode="editMode" :inputUI="''"/>
-            <String label="StateEtn" v-model="value.stateEtn" :editMode="editMode" :inputUI="''"/>
+            <String label="TotalReq" v-model="value.totalReq" :editMode="editMode" :inputUI="''"/>
+            <String label="TotalDns" v-model="value.totalDns" :editMode="editMode" :inputUI="''"/>
+            <String label="TotalEtn" v-model="value.totalEtn" :editMode="editMode" :inputUI="''"/>
             <String label="LastInspectDate" v-model="value.lastInspectDate" :editMode="editMode" :inputUI="''"/>
-            <Manager offline label="Device" v-model="value.device" :editMode="editMode" @change="change"/>
+            <DetailManager offline label="Details" v-model="value.details" :editMode="editMode" @change="change"/>
         </v-card-text>
 
         <v-card-actions style="background-color: white;">

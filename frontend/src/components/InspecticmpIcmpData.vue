@@ -16,6 +16,7 @@
         </v-card-title >        
 
         <v-card-text style="background-color: white;">
+            <Number v-if="editMode" label="IpId" v-model="value.ipId" :editMode="editMode" :inputUI="''"/>
             <String label="Obj" v-model="value.obj" :editMode="editMode" :inputUI="''"/>
             <String label="ObjDetail" v-model="value.objDetail" :editMode="editMode" :inputUI="''"/>
             <String label="State" v-model="value.state" :editMode="editMode" :inputUI="''"/>

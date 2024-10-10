@@ -18,23 +18,29 @@ public class InputInfo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long clientId;
 
     private String clientName;
 
     private Date createDate;
 
     @ElementCollection
-    private List<ClientEquip> clientEquips;
+    private List<Detail> details;
 
     @PostPersist
     public void onPostPersist() {
         ClientInfoCreated clientInfoCreated = new ClientInfoCreated(this);
         clientInfoCreated.publishAfterCommit();
+    }
 
+    @PostUpdate
+    public void onPostUpdate() {
         ClientInfoModified clientInfoModified = new ClientInfoModified(this);
         clientInfoModified.publishAfterCommit();
+    }
 
+    @PostRemove
+    public void onPostRemove() {
         ClientInfoDeleted clientInfoDeleted = new ClientInfoDeleted(this);
         clientInfoDeleted.publishAfterCommit();
     }
@@ -45,5 +51,33 @@ public class InputInfo {
         );
         return inputInfoRepository;
     }
+
+    //<<< Clean Arch / Port Method
+    public void createClientInfo(
+        CreateClientInfoCommand createClientInfoCommand
+    ) {
+        //implement business logic here:
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public void modifyClientInfo(
+        ModifyClientInfoCommand modifyClientInfoCommand
+    ) {
+        //implement business logic here:
+
+    }
+
+    //>>> Clean Arch / Port Method
+    //<<< Clean Arch / Port Method
+    public void deleteClientInfo(
+        DeleteClientInfoCommand deleteClientInfoCommand
+    ) {
+        //implement business logic here:
+
+    }
+    //>>> Clean Arch / Port Method
+
 }
 //>>> DDD / Aggregate Root

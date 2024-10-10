@@ -66,10 +66,10 @@
             values: [],
             headers: 
                 [
-                    { text: "id", value: "id" },
+                    { text: "clientId", value: "clientId" },
                     { text: "clientName", value: "clientName" },
                     { text: "createDate", value: "createDate" },
-                    { text: "clientEquips", value: "clientEquips" },
+                    { text: "details", value: "details" },
                 ],
             inputInfo : [],
             newValue: {},
@@ -87,9 +87,10 @@
             this.values = temp.data._embedded.inputinfos;
 
             this.newValue = {
+                'clientId': 0,
                 'clientName': '',
-                'createDate': '2024-10-08',
-                'clientEquips': [],
+                'createDate': '2024-10-10',
+                'details': [],
             }
         },
         methods: {

@@ -13,8 +13,9 @@ public class SwapToInspect extends AbstractEvent {
     private String createDate;
     private String modifiDate;
     private String clientName;
-    private String stateReq;
-    private String stateDns;
-    private String stateEtn;
+    private String totalReq;
+    private String totalDns;
+    private String totalEtn;
     private String lastInspectDate;
+    private Object details;
 }

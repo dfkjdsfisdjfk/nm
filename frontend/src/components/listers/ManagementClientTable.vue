@@ -66,15 +66,15 @@
             values: [],
             headers: 
                 [
-                    { text: "id", value: "id" },
+                    { text: "clientId", value: "clientId" },
                     { text: "createDate", value: "createDate" },
                     { text: "modifiDate", value: "modifiDate" },
                     { text: "clientName", value: "clientName" },
-                    { text: "stateReq", value: "stateReq" },
-                    { text: "stateDns", value: "stateDns" },
-                    { text: "stateEtn", value: "stateEtn" },
+                    { text: "totalReq", value: "totalReq" },
+                    { text: "totalDns", value: "totalDns" },
+                    { text: "totalEtn", value: "totalEtn" },
                     { text: "lastInspectDate", value: "lastInspectDate" },
-                    { text: "device", value: "device" },
+                    { text: "details", value: "details" },
                 ],
             client : [],
             newValue: {},
@@ -92,14 +92,15 @@
             this.values = temp.data._embedded.clients;
 
             this.newValue = {
+                'clientId': 0,
                 'createDate': '',
                 'modifiDate': '',
                 'clientName': '',
-                'stateReq': '',
-                'stateDns': '',
-                'stateEtn': '',
+                'totalReq': '',
+                'totalDns': '',
+                'totalEtn': '',
                 'lastInspectDate': '',
-                'device': [],
+                'details': [],
             }
         },
         methods: {

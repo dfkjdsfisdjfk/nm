@@ -57,14 +57,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='StartDnsInspected'"
+        condition = "headers['type']=='IcmpInspected'"
     )
-    public void wheneverStartDnsInspected_DataModify(
-        @Payload StartDnsInspected startDnsInspected
+    public void wheneverIcmpInspected_DataModify(
+        @Payload IcmpInspected icmpInspected
     ) {
-        StartDnsInspected event = startDnsInspected;
+        IcmpInspected event = icmpInspected;
         System.out.println(
-            "\n\n##### listener DataModify : " + startDnsInspected + "\n\n"
+            "\n\n##### listener DataModify : " + icmpInspected + "\n\n"
         );
 
         // Sample Logic //
@@ -73,14 +73,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='StartHttpInspected'"
+        condition = "headers['type']=='HttpInspected'"
     )
-    public void wheneverStartHttpInspected_DataModify(
-        @Payload StartHttpInspected startHttpInspected
+    public void wheneverHttpInspected_DataModify(
+        @Payload HttpInspected httpInspected
     ) {
-        StartHttpInspected event = startHttpInspected;
+        HttpInspected event = httpInspected;
         System.out.println(
-            "\n\n##### listener DataModify : " + startHttpInspected + "\n\n"
+            "\n\n##### listener DataModify : " + httpInspected + "\n\n"
         );
 
         // Sample Logic //
@@ -89,14 +89,14 @@ public class PolicyHandler {
 
     @StreamListener(
         value = KafkaProcessor.INPUT,
-        condition = "headers['type']=='StartIcmpInspected'"
+        condition = "headers['type']=='DnsInspected'"
     )
-    public void wheneverStartIcmpInspected_DataModify(
-        @Payload StartIcmpInspected startIcmpInspected
+    public void wheneverDnsInspected_DataModify(
+        @Payload DnsInspected dnsInspected
     ) {
-        StartIcmpInspected event = startIcmpInspected;
+        DnsInspected event = dnsInspected;
         System.out.println(
-            "\n\n##### listener DataModify : " + startIcmpInspected + "\n\n"
+            "\n\n##### listener DataModify : " + dnsInspected + "\n\n"
         );
 
         // Sample Logic //

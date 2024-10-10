@@ -15,6 +15,9 @@
                             <v-list-item-title>
                             </v-list-item-title>
                             <v-list-item-subtitle>
+                                ClientId :  {{item.clientId }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
                                 CreateDate :  {{item.createDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
@@ -24,19 +27,19 @@
                                 ClientName :  {{item.clientName }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                StateReq :  {{item.stateReq }}
+                                TotalReq :  {{item.totalReq }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                StateDns :  {{item.stateDns }}
+                                TotalDns :  {{item.totalDns }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                StateEtn :  {{item.stateEtn }}
+                                TotalEtn :  {{item.totalEtn }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 LastInspectDate :  {{item.lastInspectDate }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Device :  {{item.device }}
+                                Details :  {{item.details }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -88,7 +91,7 @@
                 var obj = {}
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
-                    obj['id'] = arr[4]; 
+                    obj['clientId'] = arr[4]; 
                     
                     
                     

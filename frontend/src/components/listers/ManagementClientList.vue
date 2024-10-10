@@ -52,15 +52,15 @@
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
-                            [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ ClientId :  {{data.clientId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ CreateDate :  {{data.createDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ModifiDate :  {{data.modifiDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ ClientName :  {{data.clientName }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StateReq :  {{data.stateReq }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StateDns :  {{data.stateDns }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ StateEtn :  {{data.stateEtn }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TotalReq :  {{data.totalReq }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TotalDns :  {{data.totalDns }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ TotalEtn :  {{data.totalEtn }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ LastInspectDate :  {{data.lastInspectDate }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Device :  {{data.device }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Details :  {{data.details }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -128,14 +128,15 @@
             this.values = temp.data._embedded.clients;
             
             this.newValue = {
+                'clientId': 0,
                 'createDate': '',
                 'modifiDate': '',
                 'clientName': '',
-                'stateReq': '',
-                'stateDns': '',
-                'stateEtn': '',
+                'totalReq': '',
+                'totalDns': '',
+                'totalEtn': '',
                 'lastInspectDate': '',
-                'device': [],
+                'details': [],
             }
         },
         methods: {

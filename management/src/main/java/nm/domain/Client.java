@@ -16,7 +16,7 @@ public class Client {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private Long clientId;
 
     private String createDate;
 
@@ -24,16 +24,16 @@ public class Client {
 
     private String clientName;
 
-    private String stateReq;
+    private String totalReq;
 
-    private String stateDns;
+    private String totalDns;
 
-    private String stateEtn;
+    private String totalEtn;
 
     private String lastInspectDate;
 
     @ElementCollection
-    private List<Device> device;
+    private List<Detail> details;
 
     @PostPersist
     public void onPostPersist() {
@@ -97,7 +97,7 @@ public class Client {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void dataModify(StartDnsInspected startDnsInspected) {
+    public static void dataModify(IcmpInspected icmpInspected) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -108,7 +108,7 @@ public class Client {
 
         /** Example 2:  finding and process
         
-        repository().findById(startDnsInspected.get???()).ifPresent(client->{
+        repository().findById(icmpInspected.get???()).ifPresent(client->{
             
             client // do something
             repository().save(client);
@@ -121,7 +121,7 @@ public class Client {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void dataModify(StartHttpInspected startHttpInspected) {
+    public static void dataModify(HttpInspected httpInspected) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -132,7 +132,7 @@ public class Client {
 
         /** Example 2:  finding and process
         
-        repository().findById(startHttpInspected.get???()).ifPresent(client->{
+        repository().findById(httpInspected.get???()).ifPresent(client->{
             
             client // do something
             repository().save(client);
@@ -145,7 +145,7 @@ public class Client {
 
     //>>> Clean Arch / Port Method
     //<<< Clean Arch / Port Method
-    public static void dataModify(StartIcmpInspected startIcmpInspected) {
+    public static void dataModify(DnsInspected dnsInspected) {
         //implement business logic here:
 
         /** Example 1:  new item 
@@ -156,7 +156,7 @@ public class Client {
 
         /** Example 2:  finding and process
         
-        repository().findById(startIcmpInspected.get???()).ifPresent(client->{
+        repository().findById(dnsInspected.get???()).ifPresent(client->{
             
             client // do something
             repository().save(client);

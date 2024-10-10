@@ -6,6 +6,9 @@
 
         <v-card-text>
             <div>
+                <Number label="ClientId" v-model="item.clientId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
                 <String label="CreateDate" v-model="item.createDate" :editMode="editMode" @change="change" />
             </div>
             <div>
@@ -15,18 +18,18 @@
                 <String label="ClientName" v-model="item.clientName" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="StateReq" v-model="item.stateReq" :editMode="editMode" @change="change" />
+                <String label="TotalReq" v-model="item.totalReq" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="StateDns" v-model="item.stateDns" :editMode="editMode" @change="change" />
+                <String label="TotalDns" v-model="item.totalDns" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="StateEtn" v-model="item.stateEtn" :editMode="editMode" @change="change" />
+                <String label="TotalEtn" v-model="item.totalEtn" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="LastInspectDate" v-model="item.lastInspectDate" :editMode="editMode" @change="change" />
             </div>
-            <DeviceManager offline label="Device" v-model="item.device" :editMode="false" @change="change" />
+            <DetailManager offline label="Details" v-model="item.details" :editMode="false" @change="change" />
         </v-card-text>
 
         <v-card-actions>
